@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{@Project Title@}: Earned Value Analysis</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="include/style.css" />
+</head>
+
+<body>
+    <div id="navigation">
+        <ul>
+            <li>
+                <a href="index.html">Overview</a>
+            </li>
+
+            <li>
+                <a href="task.html">Task Report</a>
+            </li>
+
+            <li>
+                <a href="resource.html">Resource Report</a>
+            </li>
+
+            <li>
+                <a href="eva.html" class="active">Earned Value Analysis</a>
+            </li>
+
+            <li>
+                <a href="gantt.html">Gantt Chart</a>
+            </li>
+
+            <li>
+                <a href="timeline.html">Resources Timeline</a>
+            </li>
+            <li><a href="montecarlo.html">Monte Carlo Simulation</a></li>  
+        </ul>
+    </div>
+
+    <div id="contentwrap">
+        <div id="content" class="box">
+            <h1>{@Project Title@}: Earned Value Analysis</h1>
+
+            <div class="tablewrap">
+            <table class="basic">
+
+	<tr>
+		<th>Task</th>
+		<th>Planned Value</th>
+		<th>Earned Value</th>
+		<th>Actual Cost</th>
+		<th>Cost Variance</th>
+		<th>Schedule Variance</th>
+		<th>Estimate at Completion</th>
+		<th>Budgeted at Completion</th>
+		<th>Variance at Completion</th>
+		<th>CPI</th>
+		<th>SPI</th>
+		<th>CV %</th>
+		<th>SV %</th>
+		<th>TCPI</th>
+		
+	</tr>
+		{@Tasks@}	
+	<tr>
+		<td style="padding-left: {@Task Level@}8px;" class="wrap">{@ID@}) {@Title@}</td>
+		<td>{@ev_budgetedCostOfWorkScheduled@}</td>
+		<td>{@ev_budgetedCostOfWorkPerformed@}</td>
+		<td>{@ev_actualCostOfWorkPerformed@}</td>
+		<td>{@ev_costVariance@}</td>
+		<td>{@ev_scheduleVariance@}</td>
+		<td>{@ev_estimateAtCompletion@}</td>
+		<td>{@ev_budgetedAtCompletion@}</td>
+		<td>{@ev_varianceAtCompletion@}</td>
+		<td>{@ev_costPerformanceIndex@}</td>
+		<td>{@ev_schedulePerformanceIndex@}</td>
+		<td>{@ev_costVariancePercent@}</td>
+		<td>{@ev_scheduleVariancePercent@}</td>
+		<td>{@ev_toCompletePerformanceIndex@}</td>
+	</tr>
+	{@/Tasks@}
+</table>
+        </div><!-- end table wrap -->
+	</div>
+    </div><!-- end contentwrap -->
+	 <p class="exported">Exported {@Date@}</p>
+</body>
+</html>

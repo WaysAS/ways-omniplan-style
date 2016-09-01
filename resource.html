@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{@Project Title@}: Resource Report</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="include/style.css" />
+</head>
+
+<body>
+    <div id="navigation">
+        <ul>
+            <li>
+                <a href="index.html">Overview</a>
+            </li>
+
+            <li>
+                <a href="task.html">Task Report</a>
+            </li>
+
+            <li>
+                <a href="resource.html" class="active">Resource Report</a>
+            </li>
+
+            <li>
+                <a href="eva.html">Earned Value Analysis</a>
+            </li>
+
+            <li>
+                <a href="gantt.html">Gantt Chart</a>
+            </li>
+
+            <li>
+                <a href="timeline.html">Resources Timeline</a>
+            </li>
+            
+            <li><a href="montecarlo.html">Monte Carlo Simulation</a></li>
+        </ul>
+    </div>
+
+    <div id="contentwrap">
+        <div id="content" class="box">
+            <h1>{@Project Title@}: Resource Timeline</h1>
+
+            <div class="tablewrap">
+               <table class="basic" id="resource-report">
+            <tr>
+                <th>Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Duration</th>
+                <th>% Complete</th>
+                <th>Assignment Cost</th>
+            </tr>
+            {@Resources@}
+            <tr class="resource {@Resource Type@}">
+                <td style="padding-left: {@Resource Level@}0px;">{@Resource@}</td>
+                <td>{@Start@}</td>
+                <td>{@End@}</td>
+                <td>{@Time@}</td>
+                <td>{@%Done@}</td>
+                <td>{@Resources Cost@}</td>
+            </tr>
+            {@Assignments@}
+            <tr>
+                <td style="padding-left: {@Resource Level@}8px;" class="wrap {@Task Type@}">{@Title@}</td> 
+                <td>{@Start@}</td>
+                <td>{@End@}</td>
+                <td>{@Time@}</td>
+                <td>{@%Done@}</td>
+                <td>{@Resources Cost@}</td>
+            </tr>
+            {@/Assignments@}
+            {@/Resources@}
+        </table>
+            </div>
+        </div>
+    </div><!-- end contentwrap -->
+
+    <p class="exported">Exported {@Date@}</p>
+</body>
+</html>

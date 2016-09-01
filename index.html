@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>{@Project Title@}: Overview</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="include/style.css">
+	</head>
+<body>
+	<div id="contentwrap">
+	<div id="sidebar">
+        <div id="logo" class="box">
+            <img src="include/logo.svg" alt="" />
+        </div>
+		<div id="cost" class="box">
+			<h2>Cost</h2>
+			<p class="number">{@Cost@}</p>
+		</div>
+		<div id="completed" class="box">
+			<h2><span class="number">{@Completion@}</span> Completed</h2>
+			<div id="bar"><div id="fill" style="width:{@Completion@};"></div></div>
+			<p><span class="label">Start:</span> {@StartDate@}</p>
+			<p><span class="label">End Date:</span> {@EndDate@}</p>
+			<p><span class="label">Variance:</span> {@EndVariance@}</p>
+		</div>
+
+	</div>
+	<div id="maincontent" class="box">
+		<h1>{@Project Title@}</h1>
+
+		<h2>Resource summary</h2>
+		<div class="tablewrap">
+               <table class="basic" id="resource-report">
+            <tr>
+                <th>Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Duration</th>
+                <th>% Complete</th>
+                <th>Assignment Cost</th>
+            </tr>
+            {@Resources@}
+            <tr class="resource {@Resource Type@}">
+                <td style="padding-left: {@Resource Level@}0px;">{@Resource@}</td>
+                <td>{@Start@}</td>
+                <td>{@End@}</td>
+                <td>{@Time@}</td>
+                <td>{@%Done@}</td>
+                <td>{@Resources Cost@}</td>
+            </tr>
+            {@/Resources@}
+        </table>
+            </div>
+<h2>Earned Value Analysis Summary</h2>
+ <div class="tablewrap">
+            <table class="basic">
+
+	<tr>
+
+		<th>Planned Value</th>
+		<th>Earned Value</th>
+		<th>Actual Cost</th>
+		<th>Cost Variance</th>
+		<th>Schedule Variance</th>
+		<th>Estimate at Completion</th>
+		<th>Budgeted at Completion</th>
+		<th>Variance at Completion</th>
+		<th>CPI</th>
+		<th>SPI</th>
+		<th>CV %</th>
+		<th>SV %</th>
+		<th>TCPI</th>
+
+	</tr>
+		{@ProjectTask@}
+	<tr>
+
+		<td>{@ev_budgetedCostOfWorkScheduled@}</td>
+		<td>{@ev_budgetedCostOfWorkPerformed@}</td>
+		<td>{@ev_actualCostOfWorkPerformed@}</td>
+		<td>{@ev_costVariance@}</td>
+		<td>{@ev_scheduleVariance@}</td>
+		<td>{@ev_estimateAtCompletion@}</td>
+		<td>{@ev_budgetedAtCompletion@}</td>
+		<td>{@ev_varianceAtCompletion@}</td>
+		<td>{@ev_costPerformanceIndex@}</td>
+		<td>{@ev_schedulePerformanceIndex@}</td>
+		<td>{@ev_costVariancePercent@}</td>
+		<td>{@ev_scheduleVariancePercent@}</td>
+		<td>{@ev_toCompletePerformanceIndex@}</td>
+	</tr>
+	{@/ProjectTask@}
+</table>
+            </div>
+
+
+
+            </div><!-- end content-->
+	</div><!-- end contentwrap -->
+	 <p class="exported">Ways {@Date@}</p>
+
+</body>

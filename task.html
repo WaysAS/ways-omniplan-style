@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{@Project Title@}: Task Report</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="include/style.css" />
+</head>
+
+<body>
+    <div id="navigation">
+        <ul>
+            <li>
+                <a href="index.html">Overview</a>
+            </li>
+
+            <li>
+                <a href="task.html" class="active">Task Report</a>
+            </li>
+
+            <li>
+                <a href="resource.html">Resource Report</a>
+            </li>
+
+            <li>
+                <a href="eva.html">Earned Value Analysis</a>
+            </li>
+
+            <li>
+                <a href="gantt.html">Gantt Chart</a>
+            </li>
+
+            <li>
+                <a href="timeline.html">Resources Timeline</a>
+            </li>
+            
+            <li><a href="montecarlo.html">Monte Carlo Simulation</a></li>
+        </ul>
+    </div>
+
+    <div id="contentwrap">
+        <div id="content" class="box">
+            <h1>{@Project Title@}: Task Report</h1>
+
+            <div class="tablewrap">
+           <table class="basic" id="task-report">
+            <tr>
+                <th>Task</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Duration</th>
+                <th>Completed</th>
+                <th>Dependencies</th>
+                <th class="total">Total Cost</th>
+                <th>Assigned</th>
+                <th>Planned Start</th>
+                <th>Start Variance</th>
+                <th>Constraint Start</th>
+                <th>Planned End</th>
+                <th>End Variance</th>
+                <th>Constraint End</th>
+            </tr>
+            {@Tasks@}
+            <tr class="{@Task Type@}">
+                <td style="padding-left: {@Task Level@}8px;" class="wrap">{@ID@}) {@Title@}</td>
+                <td>{@Start@}</td>
+                <td>{@End@}</td>
+                <td>{@Time@}</td>
+                <td>{@%Done@}</td>
+                <td>{@Dependencies@}</td>
+                <td class="total">{@Total Task Cost@}</td>
+                <td>{@Assigned@}</td>
+                <td>{@Planned Start@}</td>
+                <td>{@Start Variance@}</td>
+                <td>{@Constraint Start@}</td>
+                <td>{@Planned End@}</td>
+                <td>{@End Variance@}</td>
+                <td>{@Constraint End@}</td>
+            </tr>
+            {@/Tasks@}
+        </table>
+        </div><!-- end table wrap -->
+	</div>
+    </div><!-- end contentwrap -->
+	 <p class="exported">Exported {@Date@}</p>
+</body>
+</html>
